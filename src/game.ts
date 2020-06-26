@@ -13,9 +13,12 @@ robot.addComponent(
 engine.addEntity(robot)
 
 // material for face
-const faceMaterial = new BasicMaterial()
+const faceMaterial = new Material()
 const texture = new Texture('images/robotTalking.png', { samplingMode: 0 })
-faceMaterial.texture = texture
+faceMaterial.albedoTexture = texture
+faceMaterial.specularIntensity = 0
+faceMaterial.metallic = 0
+faceMaterial.roughness = 1
 
 // create plane to show the frames on
 const robotFace = new Entity()
