@@ -50,7 +50,7 @@ export class UpdateSprite implements ISystem {
         this.faceMappingsX + this.frameSizeX,
         this.faceMappingsY + this.frameSizeY,
         this.faceMappingsX,
-        this.faceMappingsY + this.frameSizeY,
+        this.faceMappingsY + this.frameSizeY
       ]
     }
   }

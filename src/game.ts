@@ -3,11 +3,11 @@
 import { UpdateSprite } from './modules/spriteFrames'
 
 // 3d model of robot
-let robot = new Entity()
+const robot = new Entity()
 robot.addComponent(new GLTFShape('models/robotTalking.glb'))
 robot.addComponent(
   new Transform({
-    position: new Vector3(8, 1.5, 8),
+    position: new Vector3(8, 1.5, 8)
   })
 )
 engine.addEntity(robot)
@@ -26,7 +26,7 @@ const transform = new Transform()
 transform.position.set(8, 1.5, 8.005)
 transform.scale.setAll(0.4)
 
-let plane = new PlaneShape()
+const plane = new PlaneShape()
 robotFace.addComponentOrReplace(plane)
 robotFace.addComponentOrReplace(faceMaterial)
 robotFace.addComponentOrReplace(transform)
@@ -43,20 +43,5 @@ engine.addSystem(new UpdateSprite(8, 8, 0.2, plane))
 // there are 8 sets of X,Y coordinates, for the four corners on the front and the back of the plane
 
 plane.uvs = [
-  0,
-  0.875,
-  0.125,
-  0.875,
-  0.125,
-  1,
-  0,
-  1,
-  0,
-  0.875,
-  0.125,
-  0.875,
-  0.125,
-  1,
-  0,
-  1,
+  0, 0.875, 0.125, 0.875, 0.125, 1, 0, 1, 0, 0.875, 0.125, 0.875, 0.125, 1, 0, 1
 ]
